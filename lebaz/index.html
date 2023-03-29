@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8' />
+    <title>Lebaz</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .marker {
+            background-image: url('point.png');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .mapboxgl-popup {
+            max-width: 200px;
+        }
+
+        .mapboxgl-popup-content {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id='map'></div>
+
+    <script>
+
+        mapboxgl.accessToken = 'pk.eyJ1IjoiY2FzZXNhIiwiYSI6ImNsOXhkMXMxYjA3ZnIzdnBjem9kZHh0encifQ.vOqrDwo_9qRj8inMUaz8ZQ';
+
+        // code from the next step will go here!
+
+
+        const geojson = {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Lululemon",
+                        "address": "578 N Midvale Blvd, Madison, WI 53705"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.4513,
+                            43.07245
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "August",
+                        "address": "414 State St, Madison, WI 53703"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.39193,
+                            43.075031
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Sunne Boutique",
+                        "address": "2534 Monroe St, Madison, WI 53711"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.42758,
+                            43.0581
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Up North Boutique",
+                        "address": "404 W Lakeside St, Madison, WI 53715"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.38898,
+                            43.05633
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Madewell",
+                        "address": "710 N Midvale Blvd, Madison, WI 53705"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.45132,
+                            43.07372
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Twigs",
+                        "address": "570 N Midvale Blvd, Madison, WI 53705"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.45108032,
+                            43.07492065
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Untuckit",
+                        "address": "700 N Midvale Blvd, Madison, WI 53705"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.4512364,
+                            43.0741481
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Z Boutique",
+                        "address": "6108 Mineral Point Rd, Madison, WI 53705"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.4852674,
+                            43.0612827
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Hive of Madison",
+                        "address": "1904 Monroe St, Madison, WI 53711"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.4178189,
+                            43.0646156
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Urban Outfitters",
+                        "address": "604 State St, Madison, WI 53703"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.3958671,
+                            43.0751437
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Pitaya",
+                        "address": "341 E Campus Mall, Madison, WI 53715"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.3985991,
+                            43.0726339
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Ragstock",
+                        "address": "329 State St, Madison, WI 53703"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.3911439,
+                            43.0745932
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Jazzman & Duet",
+                        "address": "307-309 State St, Madison, WI 53703"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.3905725,
+                            43.0746533
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "ReThreads",
+                        "address": "410 State St, Madison, WI 53703"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.3918652,
+                            43.0749791
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Evereve",
+                        "address": "666 N Midvale Blvd, Madison, WI 53705"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.451899,
+                            43.0734292
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Sconnie Nation",
+                        "address": "521 State St, Madison, WI 53703"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.3944894,
+                            43.0745809
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Macy's",
+                        "address": "702 N Midvale Blvd Ste 132, Madison, WI 53705"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.4529586,
+                            43.0728554
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Nordstrom Rack",
+                        "address": "7349 W Towne Way, Madison, WI 53719"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.5109708,
+                            43.0549845
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Good Style Shop",
+                        "address": "817 E Johnson St, Madison, WI 53703"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.3771512,
+                            43.0834648
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Change Boutique",
+                        "address": "1252 Williamson St, Madison, WI 53703"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.3628449,
+                            43.0845208
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "My Pretty Girl",
+                        "address": "1821 Monroe St, Madison, WI 53711"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.4166655,
+                            43.065057
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Upshift",
+                        "address": "836 E Johnson St, Madison, WI 53703"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.3770154,
+                            43.0841312
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Good Day Shop",
+                        "address": "1925 Monroe St #120, Madison, WI 53711"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.4181841,
+                            43.0639924
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Singlestitch",
+                        "address": "214 State St, Madison, WI 53703"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.3886605,
+                            43.0749843
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Free People",
+                        "address": "709 Hilldale Wy, Madison, WI 53705"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.4531801,
+                            43.0741002
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Soli by Jazzman",
+                        "address": "340 State St, Madison, WI 53703"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.3911177,
+                            43.0749514
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Mainstream Boutique of Madison",
+                        "address": "601 Junction Rd, Madison, WI 53717"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.5251905,
+                            43.0731871
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "SO Collection",
+                        "address": "1931 Monroe St, Madison, WI 53711"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.4183743,
+                            43.0638538
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Title Nine",
+                        "address": "472 N Midvale Blvd, Madison, WI 53705"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.452751,
+                            43.0725636
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Princess of India Imports",
+                        "address": "306 State St, Madison, WI 53703"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.3904898,
+                            43.0749237
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Insignia Campus Apparel",
+                        "address": "639 State St, Madison, WI 53703"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.3966957,
+                            43.0747662
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "So Simple Shop",
+                        "address": "148 E Wilson St, Madison, WI 53703"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.3789649,
+                            43.074385
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Anthropologie",
+                        "address": "702 N Midvale Blvd, Madison, WI 53705"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.4529586,
+                            43.0728554
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Levi's Store",
+                        "address": "574 N Midvale Blvd, Madison, WI 53705"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.4523268,
+                            43.0724262
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "store_name": "Windsor",
+                        "address": "54 W Towne Mall D-01A, Madison, WI 53719"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -89.505106,
+                            43.05819
+                        ]
+                    }
+                }
+            ]
+        }
+
+
+
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/light-v11',
+            center: [-89.4513, 43.07245],
+            zoom: 12
+        });
+
+        // add markers to map
+        for (const feature of geojson.features) {
+            // create a HTML element for each feature
+            const el = document.createElement('div');
+            el.className = 'marker';
+
+            // make a marker for each feature and add it to the map
+            new mapboxgl.Marker(el)
+                .setLngLat(feature.geometry.coordinates)
+                .setPopup(
+                    new mapboxgl.Popup({ offset: 25 }) // add popups
+                        .setHTML(
+                            `<h3>${feature.properties.store_name}</h3><p>${feature.properties.address}</p>`
+                        )
+                )
+                .addTo(map);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

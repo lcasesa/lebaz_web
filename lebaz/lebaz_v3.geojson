@@ -1,0 +1,355 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.4513,43.07245 ]
+    },
+    "properties": {
+    "store_name":"Lululemon"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.39193,43.075031 ]
+    },
+    "properties": {
+    "store_name":"August"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.42758,43.0581 ]
+    },
+    "properties": {
+    "store_name":"Sunne Boutique"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.38898,43.05633 ]
+    },
+    "properties": {
+    "store_name":"Up North Boutique"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.45132,43.07372 ]
+    },
+    "properties": {
+    "store_name":"Madewell"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.45108032,43.07492065 ]
+    },
+    "properties": {
+    "store_name":"Twigs"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.4512364,43.0741481 ]
+    },
+    "properties": {
+    "store_name":"Untuckit"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.4852674,43.0612827 ]
+    },
+    "properties": {
+    "store_name":"Z Boutique"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.4178189,43.0646156 ]
+    },
+    "properties": {
+    "store_name":"Hive of Madison"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.3958671,43.0751437 ]
+    },
+    "properties": {
+    "store_name":"Urban Outfitters"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.3985991,43.0726339 ]
+    },
+    "properties": {
+    "store_name":"Pitaya"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.3911439,43.0745932 ]
+    },
+    "properties": {
+    "store_name":"Ragstock"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.3905725,43.0746533 ]
+    },
+    "properties": {
+    "store_name":"Jazzman & Duet"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.3918652,43.0749791 ]
+    },
+    "properties": {
+    "store_name":"ReThreads"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.451899,43.0734292 ]
+    },
+    "properties": {
+    "store_name":"Evereve"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.3944894,43.0745809 ]
+    },
+    "properties": {
+    "store_name":"Sconnie Nation"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.4529586,43.0728554 ]
+    },
+    "properties": {
+    "store_name":"Macy's"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.5109708,43.0549845 ]
+    },
+    "properties": {
+    "store_name":"Nordstrom Rack"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.3771512,43.0834648 ]
+    },
+    "properties": {
+    "store_name":"Good Style Shop"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.3628449,43.0845208 ]
+    },
+    "properties": {
+    "store_name":"Change Boutique"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.4166655,43.065057 ]
+    },
+    "properties": {
+    "store_name":"My Pretty Girl"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.3770154,43.0841312 ]
+    },
+    "properties": {
+    "store_name":"Upshift"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.4181841,43.0639924 ]
+    },
+    "properties": {
+    "store_name":"Good Day Shop"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.3886605,43.0749843 ]
+    },
+    "properties": {
+    "store_name":"Singlestitch"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.4531801,43.0741002 ]
+    },
+    "properties": {
+    "store_name":"Free People"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.3911177,43.0749514 ]
+    },
+    "properties": {
+    "store_name":"Soli by Jazzman"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.5251905,43.0731871 ]
+    },
+    "properties": {
+    "store_name":"Mainstream Boutique of Madison"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.4183743,43.0638538 ]
+    },
+    "properties": {
+    "store_name":"SO Collection"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.452751,43.0725636 ]
+    },
+    "properties": {
+    "store_name":"Title Nine"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.3904898,43.0749237 ]
+    },
+    "properties": {
+    "store_name":"Princess of India Imports"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.3966957,43.0747662 ]
+    },
+    "properties": {
+    "store_name":"Insignia Campus Apparel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.3789649,43.074385 ]
+    },
+    "properties": {
+    "store_name":"So Simple Shop"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.4529586,43.0728554 ]
+    },
+    "properties": {
+    "store_name":"Anthropologie"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.4523268,43.0724262 ]
+    },
+    "properties": {
+    "store_name":"Levi's Store"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.505106,43.05819 ]
+    },
+    "properties": {
+    "store_name":"Windsor"
+    }
+  }
+]
+}
